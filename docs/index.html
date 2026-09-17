@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Freud or Lasch?</title>
+<meta name="description" content="Spaced-repetition drill: read a paragraph, say whether it is Freud's The Future of an Illusion or Lasch's The Illusion of Disillusionment.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f6f3ec;
+    --card: #fffdf8;
+    --ink: #1d1a15;
+    --muted: #6b655a;
+    --line: #e2dccf;
+    --freud: #8b2f2f;
+    --freud-soft: #f5e3e0;
+    --lasch: #24507a;
+    --lasch-soft: #dfe8f3;
+    --ok: #2f6f45;
+    --ok-soft: #dfeee3;
+    --bad: #a1421f;
+    --bad-soft: #f7e3d8;
+    --accent: #7a5c1e;
+    --shadow: 0 1px 2px rgba(0,0,0,.06), 0 8px 24px rgba(40,30,10,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #16140f; --card: #211e18; --ink: #ede7db; --muted: #a49c8c; --line: #363127;
+      --freud: #e08a8a; --freud-soft: #3a2323; --lasch: #8ab4e0; --lasch-soft: #1f2d3d;
+      --ok: #8fd0a4; --ok-soft: #1f3327; --bad: #f0a07c; --bad-soft: #3d2618; --accent: #d9b76a;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #16140f; --card: #211e18; --ink: #ede7db; --muted: #a49c8c; --line: #363127;
+    --freud: #e08a8a; --freud-soft: #3a2323; --lasch: #8ab4e0; --lasch-soft: #1f2d3d;
+    --ok: #8fd0a4; --ok-soft: #1f3327; --bad: #f0a07c; --bad-soft: #3d2618; --accent: #d9b76a;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.35);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--bg); color: var(--ink);
+    font-family: "Inter", system-ui, sans-serif; line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 24px 16px 64px; }
+  header { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+  h1 { font-family: "Source Serif 4", Georgia, serif; font-weight: 600; font-size: 26px; margin: 0; letter-spacing: -.01em; }
+  h1 .f { color: var(--freud); } h1 .l { color: var(--lasch); }
+  .sub { color: var(--muted); font-size: 14px; }
+
+  .bar { display: flex; align-items: center; gap: 12px; font-size: 13px; color: var(--muted); margin-bottom: 14px; flex-wrap: wrap; }
+  .track { flex: 1 1 160px; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
+  .fill { height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+  .pill { padding: 2px 8px; border: 1px solid var(--line); border-radius: 99px; background: var(--card); }
+
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: var(--shadow); padding: 28px 28px 24px; position: relative;
+  }
+  .qlabel { font-size: 12px; text-transform: uppercase; letter-spacing: .12em; color: var(--muted); margin-bottom: 12px; }
+  .para {
+    font-family: "Source Serif 4", Georgia, serif; font-size: 18px; line-height: 1.6;
+    margin: 0 0 22px; hyphens: auto;
+  }
+  .choices { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  button { font: inherit; cursor: pointer; }
+  .choice {
+    border: 2px solid var(--line); background: transparent; color: var(--ink);
+    border-radius: 12px; padding: 16px 12px; font-size: 18px; font-weight: 600;
+    display: flex; flex-direction: column; align-items: center; gap: 4px;
+    transition: transform .08s, background .15s, border-color .15s;
+  }
+  .choice small { font-weight: 500; font-size: 12px; color: var(--muted); }
+  .choice:hover { transform: translateY(-1px); }
+  .choice.freud:hover, .choice.freud.picked { border-color: var(--freud); background: var(--freud-soft); }
+  .choice.lasch:hover, .choice.lasch.picked { border-color: var(--lasch); background: var(--lasch-soft); }
+  .choice:disabled { cursor: default; opacity: .6; transform: none; }
+  .choice.picked:disabled { opacity: 1; }
+
+  .feedback { margin-top: 18px; border-radius: 12px; padding: 16px 18px; display: none; }
+  .feedback.show { display: block; animation: pop .18s ease-out; }
+  .feedback.ok { background: var(--ok-soft); border: 1px solid color-mix(in srgb, var(--ok) 40%, transparent); }
+  .feedback.bad { background: var(--bad-soft); border: 1px solid color-mix(in srgb, var(--bad) 40%, transparent); }
+  .feedback .head { font-weight: 600; font-size: 16px; margin-bottom: 4px; }
+  .feedback.ok .head { color: var(--ok); } .feedback.bad .head { color: var(--bad); }
+  .feedback .src { font-size: 14px; margin-bottom: 8px; }
+  .feedback .src b.freud { color: var(--freud); } .feedback .src b.lasch { color: var(--lasch); }
+  .feedback .tell { font-size: 14px; color: var(--ink); }
+  .feedback .tell::before { content: "Tell: "; font-weight: 600; color: var(--muted); }
+  .feedback .again { font-size: 13px; color: var(--muted); margin-top: 8px; font-style: italic; }
+  @keyframes pop { from { opacity: 0; transform: translateY(4px);} to { opacity: 1; transform: none; } }
+
+  .actions { display: flex; gap: 10px; justify-content: flex-end; margin-top: 16px; flex-wrap: wrap; }
+  .btn {
+    border: 1px solid var(--line); background: var(--card); color: var(--ink);
+    border-radius: 10px; padding: 10px 16px; font-weight: 500; font-size: 14px;
+  }
+  .btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .btn.ghost { background: transparent; }
+  .kbd { font-family: ui-monospace, monospace; font-size: 11px; border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; color: var(--muted); margin-left: 6px; }
+
+  .done h2 { font-family: "Source Serif 4", Georgia, serif; margin: 0 0 6px; font-size: 24px; }
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 10px; margin: 16px 0; }
+  .stat { background: var(--bg); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
+  .stat .n { font-size: 24px; font-weight: 600; font-family: "Source Serif 4", serif; }
+  .stat .k { font-size: 12px; color: var(--muted); }
+  .missed { margin: 12px 0 0; padding: 0; list-style: none; }
+  .missed li { padding: 8px 0; border-top: 1px solid var(--line); font-size: 14px; }
+  .missed li b.freud { color: var(--freud); } .missed li b.lasch { color: var(--lasch); }
+  .missed .snip { color: var(--muted); font-family: "Source Serif 4", serif; }
+
+  details { margin-top: 26px; color: var(--muted); font-size: 14px; }
+  summary { cursor: pointer; font-weight: 500; color: var(--ink); }
+  details p { margin: 8px 0; }
+  .tbl { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+  .tbl th, .tbl td { text-align: left; padding: 5px 6px; border-top: 1px solid var(--line); }
+  .tbl th { color: var(--muted); font-weight: 500; }
+  .tbl td.f { color: var(--freud); font-weight: 600; } .tbl td.l { color: var(--lasch); font-weight: 600; }
+  .foot { margin-top: 28px; font-size: 12px; color: var(--muted); display: flex; gap: 14px; flex-wrap: wrap; }
+  .foot button { background: none; border: none; padding: 0; color: var(--muted); text-decoration: underline; font-size: 12px; }
+  @media (max-width: 480px) {
+    .card { padding: 20px 16px; } .para { font-size: 17px; } .choice { font-size: 16px; padding: 14px 8px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1><span class="f">Freud</span> or <span class="l">Lasch</span>?</h1>
+    <div class="sub">Read the paragraph. Name the author. Misses come back.</div>
+  </header>
+
+  <div class="bar">
+    <span class="pill" id="roundLabel">Round 1</span>
+    <div class="track"><div class="fill" id="fill"></div></div>
+    <span id="progress">0 / 28 cleared</span>
+    <span class="pill" id="queueLeft">28 in queue</span>
+  </div>
+
+  <section class="card" id="quiz">
+    <div class="qlabel" id="qlabel">Who wrote this?</div>
+    <p class="para" id="para"></p>
+    <div class="choices">
+      <button class="choice freud" data-a="freud" id="btnF">Freud <small>The Future of an Illusion · F</small></button>
+      <button class="choice lasch" data-a="lasch" id="btnL">Lasch <small>The Illusion of Disillusionment · L</small></button>
+    </div>
+    <div class="feedback" id="fb">
+      <div class="head" id="fbHead"></div>
+      <div class="src" id="fbSrc"></div>
+      <div class="tell" id="fbTell"></div>
+      <div class="again" id="fbAgain"></div>
+    </div>
+    <div class="actions" id="nextRow" style="display:none">
+      <button class="btn primary" id="btnNext">Next <span class="kbd">Enter</span></button>
+    </div>
+  </section>
+
+  <section class="card done" id="done" style="display:none">
+    <h2>Round complete</h2>
+    <div class="sub" id="doneSub"></div>
+    <div class="stats">
+      <div class="stat"><div class="n" id="sAcc">–</div><div class="k">first-try accuracy</div></div>
+      <div class="stat"><div class="n" id="sMiss">–</div><div class="k">paragraphs missed</div></div>
+      <div class="stat"><div class="n" id="sAns">–</div><div class="k">total answers</div></div>
+    </div>
+    <div id="missedWrap">
+      <div class="qlabel">Missed this round (these are weighted heavier next round)</div>
+      <ul class="missed" id="missedList"></ul>
+    </div>
+    <div class="actions">
+      <button class="btn ghost" id="btnMissedOnly">Drill only my misses</button>
+      <button class="btn primary" id="btnAgain">New full round <span class="kbd">Enter</span></button>
+    </div>
+  </section>
+
+  <details>
+    <summary>How it works, and your all-time trouble spots</summary>
+    <p>Every round shuffles all 28 numbered paragraphs (Freud 1–12, Lasch 1–16). A paragraph is cleared when you answer it correctly. If you miss it, it is reinserted a few cards later and must then be answered correctly twice in a row before it clears, like an Anki lapse. Paragraphs you have missed in earlier rounds are shuffled toward the front of the next round. Progress is saved in this browser.</p>
+    <table class="tbl" id="histTbl"></table>
+  </details>
+
+  <div class="foot">
+    <button id="btnTheme">Toggle dark mode</button>
+    <button id="btnReset">Reset all saved progress</button>
+    <span>Keyboard: F / L to answer, Enter for next.</span>
+  </div>
+</div>
+
+<script src="data.js"></script>
+<script>
+(function () {
+  const CARDS = window.CARDS;
+  const NAMES = { freud: "Sigmund Freud", lasch: "Christopher Lasch" };
+  const TITLES = { freud: "The Future of an Illusion", lasch: "The Illusion of Disillusionment" };
+  const KEY = "freud-lasch-quiz-v1";
+
+  // ---------- persistence ----------
+  function loadHist() { try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; } }
+  function saveHist(h) { try { localStorage.setItem(KEY, JSON.stringify(h)); } catch (e) {} }
+  let hist = loadHist();           // { cards: {id: {seen, wrong}}, rounds }
+  hist.cards = hist.cards || {}; hist.rounds = hist.rounds || 0;
+  function rec(id) { return hist.cards[id] || (hist.cards[id] = { seen: 0, wrong: 0 }); }
+
+  // ---------- session state ----------
+  let queue = [], cur = null, answered = false;
+  let round = { total: 0, cleared: 0, answers: 0, firstTryRight: 0, missed: new Set(), seenOnce: new Set() };
+  const need = new Map();   // id -> correct answers still required
+
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+
+  function startRound(subset) {
+    const pool = subset && subset.length ? subset : CARDS;
+    // shuffle, then stable-sort so historically-missed cards drift to the front
+    const arr = shuffle(pool.slice());
+    arr.sort((a, b) => missRate(b.id) - missRate(a.id) + (Math.random() - 0.5) * 0.4);
+    queue = arr;
+    need.clear(); arr.forEach(c => need.set(c.id, 1));
+    round = { total: arr.length, cleared: 0, answers: 0, firstTryRight: 0, missed: new Set(), seenOnce: new Set() };
+    hist.rounds += 1; saveHist(hist);
+    document.getElementById("roundLabel").textContent = "Round " + hist.rounds + (subset ? " · misses only" : "");
+    document.getElementById("done").style.display = "none";
+    document.getElementById("quiz").style.display = "";
+    next();
+  }
+  function missRate(id) { const r = hist.cards[id]; return r && r.seen ? r.wrong / r.seen : 0; }
+
+  function next() {
+    if (!queue.length) return finish();
+    cur = queue.shift(); answered = false;
+    document.getElementById("para").textContent = cur.text;
+    document.getElementById("qlabel").textContent = need.get(cur.id) > 1 ? "Again. Who wrote this?" : "Who wrote this?";
+    const fb = document.getElementById("fb"); fb.className = "feedback";
+    document.getElementById("nextRow").style.display = "none";
+    ["btnF", "btnL"].forEach(i => { const b = document.getElementById(i); b.disabled = false; b.classList.remove("picked"); });
+    updateBar();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function answer(a) {
+    if (answered || !cur) return;
+    answered = true;
+    const ok = a === cur.author;
+    const r = rec(cur.id);
+    round.answers++;
+    const first = !round.seenOnce.has(cur.id); round.seenOnce.add(cur.id);
+    if (first) { r.seen++; if (ok) round.firstTryRight++; }
+    document.getElementById(a === "freud" ? "btnF" : "btnL").classList.add("picked");
+    ["btnF", "btnL"].forEach(i => document.getElementById(i).disabled = true);
+
+    let againMsg = "";
+    if (ok) {
+      const n = need.get(cur.id) - 1; need.set(cur.id, n);
+      if (n <= 0) { round.cleared++; }
+      else { reinsert(cur, 4, 7); againMsg = "Right. One more correct answer needed before this one clears."; }
+    } else {
+      if (first) r.wrong++;
+      round.missed.add(cur.id);
+      need.set(cur.id, 2);
+      reinsert(cur, 2, 4);
+      againMsg = "This paragraph will come back shortly, and again after that.";
+    }
+    saveHist(hist);
+
+    const fb = document.getElementById("fb");
+    fb.className = "feedback show " + (ok ? "ok" : "bad");
+    document.getElementById("fbHead").textContent = ok ? "Correct" : "Not quite";
+    document.getElementById("fbSrc").innerHTML =
+      '<b class="' + cur.author + '">' + NAMES[cur.author] + "</b>, <i>" + TITLES[cur.author] + "</i>, paragraph " + cur.num;
+    document.getElementById("fbTell").textContent = cur.tell;
+    document.getElementById("fbAgain").textContent = againMsg;
+    document.getElementById("nextRow").style.display = "";
+    updateBar();
+  }
+
+  function reinsert(card, lo, hi) {
+    const pos = Math.min(queue.length, lo + Math.floor(Math.random() * (hi - lo + 1)));
+    queue.splice(pos, 0, card);
+  }
+
+  function updateBar() {
+    document.getElementById("fill").style.width = (100 * round.cleared / round.total) + "%";
+    document.getElementById("progress").textContent = round.cleared + " / " + round.total + " cleared";
+    document.getElementById("queueLeft").textContent = queue.length + (answered ? "" : " + 1") + " in queue";
+  }
+
+  function finish() {
+    cur = null;
+    document.getElementById("quiz").style.display = "none";
+    const d = document.getElementById("done"); d.style.display = "";
+    const acc = round.total ? Math.round(100 * round.firstTryRight / round.total) : 0;
+    document.getElementById("sAcc").textContent = acc + "%";
+    document.getElementById("sMiss").textContent = round.missed.size;
+    document.getElementById("sAns").textContent = round.answers;
+    document.getElementById("doneSub").textContent = round.missed.size
+      ? "Every paragraph is cleared. The ones you missed needed two correct answers in a row."
+      : "Perfect round. Every paragraph on the first try.";
+    const ul = document.getElementById("missedList"); ul.innerHTML = "";
+    document.getElementById("missedWrap").style.display = round.missed.size ? "" : "none";
+    document.getElementById("btnMissedOnly").style.display = round.missed.size ? "" : "none";
+    CARDS.filter(c => round.missed.has(c.id)).forEach(c => {
+      const li = document.createElement("li");
+      li.innerHTML = '<b class="' + c.author + '">' + NAMES[c.author] + " ¶" + c.num + "</b> — <span class=\"snip\">" + esc(c.text.slice(0, 110)) + "…</span><br><span>" + esc(c.tell) + "</span>";
+      ul.appendChild(li);
+    });
+    renderHist();
+  }
+
+  function esc(s) { return s.replace(/[&<>]/g, ch => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;" }[ch])); }
+
+  function renderHist() {
+    const rows = CARDS.map(c => ({ c, r: hist.cards[c.id] || { seen: 0, wrong: 0 } }))
+      .filter(x => x.r.seen > 0)
+      .sort((a, b) => (b.r.wrong / b.r.seen) - (a.r.wrong / a.r.seen) || b.r.wrong - a.r.wrong);
+    const t = document.getElementById("histTbl");
+    if (!rows.length) { t.innerHTML = "<tr><th>No history yet.</th></tr>"; return; }
+    t.innerHTML = "<tr><th>Paragraph</th><th>Seen</th><th>Missed first try</th><th>Tell</th></tr>" +
+      rows.map(x => "<tr><td class='" + (x.c.author === "freud" ? "f" : "l") + "'>" + NAMES[x.c.author].split(" ")[1] + " ¶" + x.c.num + "</td><td>" + x.r.seen + "</td><td>" + x.r.wrong + "</td><td>" + esc(x.c.tell) + "</td></tr>").join("");
+  }
+
+  // ---------- wiring ----------
+  document.getElementById("btnF").addEventListener("click", () => answer("freud"));
+  document.getElementById("btnL").addEventListener("click", () => answer("lasch"));
+  document.getElementById("btnNext").addEventListener("click", next);
+  document.getElementById("btnAgain").addEventListener("click", () => startRound());
+  document.getElementById("btnMissedOnly").addEventListener("click", () => startRound(CARDS.filter(c => round.missed.has(c.id))));
+  document.getElementById("btnReset").addEventListener("click", () => {
+    if (!confirm("Clear all saved progress in this browser?")) return;
+    hist = { cards: {}, rounds: 0 }; saveHist(hist); startRound();
+  });
+  document.getElementById("btnTheme").addEventListener("click", () => {
+    const root = document.documentElement;
+    const dark = root.getAttribute("data-theme") === "dark" || (!root.getAttribute("data-theme") && matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme", dark ? "light" : "dark");
+    try { localStorage.setItem(KEY + "-theme", dark ? "light" : "dark"); } catch (e) {}
+  });
+  try { const t = localStorage.getItem(KEY + "-theme"); if (t) document.documentElement.setAttribute("data-theme", t); } catch (e) {}
+
+  document.addEventListener("keydown", e => {
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    const k = e.key.toLowerCase();
+    if (cur && !answered && (k === "f" || k === "1")) { e.preventDefault(); answer("freud"); }
+    else if (cur && !answered && (k === "l" || k === "2")) { e.preventDefault(); answer("lasch"); }
+    else if ((k === "enter" || k === " ") && cur && answered) { e.preventDefault(); next(); }
+    else if (k === "enter" && !cur) { e.preventDefault(); startRound(); }
+  });
+
+  renderHist();
+  startRound();
+})();
+</script>
+</body>
+</html>
