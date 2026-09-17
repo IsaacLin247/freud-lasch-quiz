@@ -56,6 +56,18 @@
   .track { flex: 1 1 160px; height: 8px; background: var(--line); border-radius: 99px; overflow: hidden; }
   .fill { height: 100%; width: 0; background: var(--accent); transition: width .3s; }
   .pill { padding: 2px 8px; border: 1px solid var(--line); border-radius: 99px; background: var(--card); }
+  .modes { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; font-size: 13px; color: var(--muted); }
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--card); }
+  .seg button { border: none; background: transparent; color: var(--muted); padding: 6px 11px; font-size: 13px; font-weight: 500; border-right: 1px solid var(--line); }
+  .seg button:last-child { border-right: none; }
+  .seg button.on { background: var(--ink); color: var(--bg); }
+  .modehint { font-size: 12px; color: var(--muted); }
+  .para.excerpt { font-size: 20px; }
+  .para.excerpt::before, .para.excerpt::after { content: "\201C"; color: var(--muted); }
+  .para.excerpt::after { content: "\201D"; }
+  .full { margin-top: 10px; font-size: 13px; color: var(--muted); }
+  .full summary { font-size: 13px; color: var(--muted); font-weight: 500; cursor: pointer; }
+  .full p { font-family: "Source Serif 4", Georgia, serif; font-size: 14px; line-height: 1.55; color: var(--ink); margin: 6px 0 0; }
 
   .card {
     background: var(--card); border: 1px solid var(--line); border-radius: 14px;
@@ -141,6 +153,17 @@
     <span class="pill" id="queueLeft">28 in queue</span>
   </div>
 
+  <div class="modes">
+    <span>Show:</span>
+    <div class="seg" id="modeSeg">
+      <button data-m="key">Key excerpt</button>
+      <button data-m="slice">Random slice</button>
+      <button data-m="full">Full paragraph</button>
+      <button data-m="mixed">Mixed</button>
+    </div>
+    <span class="modehint" id="modeHint"></span>
+  </div>
+
   <section class="card" id="quiz">
     <div class="qlabel" id="qlabel">Who wrote this?</div>
     <p class="para" id="para"></p>
@@ -153,6 +176,7 @@
       <div class="src" id="fbSrc"></div>
       <div class="tell" id="fbTell"></div>
       <div class="again" id="fbAgain"></div>
+      <details class="full" id="fullWrap"><summary>Show the whole paragraph</summary><p id="fullText"></p></details>
     </div>
     <div class="actions" id="nextRow" style="display:none">
       <button class="btn primary" id="btnNext">Next <span class="kbd">Enter</span></button>
@@ -189,6 +213,7 @@
     <span>Keyboard: F / L to answer, Enter for next.</span>
     <a href="Freud_Future_of_an_Illusion_Guide.pdf" style="color:var(--freud)">Freud study guide (PDF)</a>
     <a href="Lasch_Illusion_of_Disillusionment_Guide.pdf" style="color:var(--lasch)">Lasch study guide (PDF)</a>
+    <a href="Freud_vs_Lasch_Comparison.pdf" style="color:var(--accent)">Freud vs. Lasch comparison (PDF)</a>
   </div>
 </div>
 
@@ -206,6 +231,38 @@
   let hist = loadHist();           // { cards: {id: {seen, wrong}}, rounds }
   hist.cards = hist.cards || {}; hist.rounds = hist.rounds || 0;
   function rec(id) { return hist.cards[id] || (hist.cards[id] = { seen: 0, wrong: 0 }); }
+
+  // ---------- display mode ----------
+  const HINTS = {
+    key: "The one or two most significant sentences of the paragraph.",
+    slice: "A random run of two or three consecutive sentences, from anywhere in the paragraph.",
+    full: "The entire numbered paragraph.",
+    mixed: "Each card randomly uses key excerpt, random slice, or full paragraph."
+  };
+  let mode = "key";
+  try { mode = localStorage.getItem(KEY + "-mode") || "key"; } catch (e) {}
+  if (!HINTS[mode]) mode = "key";
+  function setMode(m) {
+    mode = m; try { localStorage.setItem(KEY + "-mode", m); } catch (e) {}
+    document.querySelectorAll("#modeSeg button").forEach(b => b.classList.toggle("on", b.dataset.m === m));
+    document.getElementById("modeHint").textContent = HINTS[m];
+    if (cur && !answered) showCard();   // re-render the current card in the new mode
+  }
+  function sentences(text) {
+    // split on sentence-ending punctuation followed by a space and a capital/quote/bracket
+    return text.match(/[^.!?]+[.!?]+["'\u201D\)]?(?=\s+[A-Z"\u201C\[(]|\s*$)/g) || [text];
+  }
+  function displayFor(card) {
+    let m = mode;
+    if (m === "mixed") m = ["key", "slice", "full"][Math.floor(Math.random() * 3)];
+    if (m === "full") return { text: card.text, excerpt: false };
+    if (m === "key") return { text: card.key, excerpt: true };
+    const ss = sentences(card.text).map(x => x.trim()).filter(Boolean);
+    const n = Math.min(ss.length, 2 + Math.floor(Math.random() * 2));
+    const start = Math.floor(Math.random() * (ss.length - n + 1));
+    return { text: ss.slice(start, start + n).join(" "), excerpt: true };
+  }
+  let curView = null;
 
   // ---------- session state ----------
   let queue = [], cur = null, answered = false;
@@ -233,13 +290,20 @@
   function next() {
     if (!queue.length) return finish();
     cur = queue.shift(); answered = false;
-    document.getElementById("para").textContent = cur.text;
+    showCard();
     document.getElementById("qlabel").textContent = need.get(cur.id) > 1 ? "Again. Who wrote this?" : "Who wrote this?";
     const fb = document.getElementById("fb"); fb.className = "feedback";
     document.getElementById("nextRow").style.display = "none";
     ["btnF", "btnL"].forEach(i => { const b = document.getElementById(i); b.disabled = false; b.classList.remove("picked"); });
     updateBar();
     window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  function showCard() {
+    curView = displayFor(cur);
+    const el = document.getElementById("para");
+    el.textContent = curView.text;
+    el.classList.toggle("excerpt", curView.excerpt);
   }
 
   function answer(a) {
@@ -274,6 +338,10 @@
       '<b class="' + cur.author + '">' + NAMES[cur.author] + "</b>, <i>" + TITLES[cur.author] + "</i>, paragraph " + cur.num;
     document.getElementById("fbTell").textContent = cur.tell;
     document.getElementById("fbAgain").textContent = againMsg;
+    const fw = document.getElementById("fullWrap");
+    fw.style.display = curView && curView.excerpt ? "" : "none";
+    fw.open = false;
+    document.getElementById("fullText").textContent = cur.text;
     document.getElementById("nextRow").style.display = "";
     updateBar();
   }
@@ -350,6 +418,8 @@
     else if (k === "enter" && !cur) { e.preventDefault(); startRound(); }
   });
 
+  document.querySelectorAll("#modeSeg button").forEach(b => b.addEventListener("click", () => setMode(b.dataset.m)));
+  setMode(mode);
   renderHist();
   startRound();
 })();

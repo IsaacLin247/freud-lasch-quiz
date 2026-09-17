@@ -8,6 +8,7 @@ Study tools for two readings on religion:
 ## Contents
 
 - `freud.txt`, `lasch.txt` — transcriptions of the class handouts, with the paragraph numbers preserved.
-- `docs/` — the quiz site (GitHub Pages). It shows a random paragraph and asks whether it is Freud or Lasch. Missed paragraphs are reinserted into the queue a few cards later and must be answered correctly twice before they clear, and paragraphs you have missed in the past are shuffled toward the front of later rounds.
+- `docs/` — the quiz site (GitHub Pages). It shows a paragraph, its key excerpt, or a random slice of a few sentences, and asks whether it is Freud or Lasch. Missed paragraphs are reinserted into the queue a few cards later and must be answered correctly twice before they clear, and paragraphs you have missed in the past are shuffled toward the front of later rounds.
 - `build_data.py` — regenerates `docs/data.js` from the two text files.
 - `Freud_Future_of_an_Illusion_Guide.pdf`, `Lasch_Illusion_of_Disillusionment_Guide.pdf` — paragraph-by-paragraph study guides.
+- `Freud_vs_Lasch_Comparison.pdf` — compare-and-contrast document with quotations beside each claim.
