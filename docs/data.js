@@ -6,7 +6,10 @@ window.CARDS = [
   "num": 1,
   "text": "What is the psychological significance of religious ideas and how can we classify them? The question is at first not at all easy to answer. Having rejected various formulas, I shall take my stand by this one: religion consists of certain dogmas, assertions about facts and conditions of external (or internal) reality, which tell one something that one has not oneself discovered and which claim that one should give them credence. As they give information about what are to us the most interesting and important things in life, they are particularly highly valued. He who knows nothing of them is ignorant indeed, and he who has assimilated them may consider himself enriched.",
   "key": "religion consists of certain dogmas, assertions about facts and conditions of external (or internal) reality, which tell one something that one has not oneself discovered and which claim that one should give them credence.",
-  "tell": "Opens by defining religion as a set of dogmas that demand credence. Clinical, classifying tone: 'psychological significance of religious ideas.'"
+  "tell": "Opens by defining religion as a set of dogmas that demand credence. Clinical, classifying tone: 'psychological significance of religious ideas.'",
+  "argument": "Freud classifies religion as dogma: claims about reality that you did not discover yourself and are asked to accept on authority. By treating religion as a set of propositions, he makes it something that can be tested like any other claim.",
+  "other": "Lasch thinks this framing is itself the modern mistake. Religion is not primarily a set of answers but 'a challenge to complacency and pride' (L¶9), and he denies it ever offered 'comprehensive and unambiguous answers' (L¶10). They diverge at the very definition.",
+  "stance": "diverge"
  },
  {
   "id": "freud-2",
@@ -14,7 +17,10 @@ window.CARDS = [
   "num": 2,
   "text": "There are of course many such dogmas about the most diverse things of this world. Every school hour is full of them. Let us choose geography. We hear there: Konstanz is on the Bodensee. A student song adds: If you don't believe it go and see. I happen to have been there, and can confirm the fact that this beautiful town lies on the shore of a broad stretch of water, which all those dwelling around call the Bodensee. I am now completely convinced of the accuracy of this geographical statement. And in this connection I am reminded of another and very remarkable experience. I was already a man of mature years when I stood for the first time on the hill of the Athenian Acropolis, between the temple ruins, looking out on to the blue sea. A feeling of astonishment mingled with my pleasure, which prompted me to say: then it really is true, what we used to be taught at school! How shallow and weak at that age must have been my belief in the real truth of what I heard if I can be so astonished today! But I will not emphasize the significance of this experience too much; yet another explanation of my astonishment is possible, which did not strike me at the time, and which is of a wholly subjective nature and connected with the peculiar character of the place.",
   "key": "We hear there: Konstanz is on the Bodensee. A student song adds: If you don't believe it go and see. [...] I was already a man of mature years when I stood for the first time on the hill of the Athenian Acropolis, between the temple ruins, looking out on to the blue sea. A feeling of astonishment mingled with my pleasure, which prompted me to say: then it really is true, what we used to be taught at school!",
-  "tell": "The Konstanz/Bodensee and Acropolis anecdote. Freud's personal travel memories used as an example of verifiable dogma."
+  "tell": "The Konstanz/Bodensee and Acropolis anecdote. Freud's personal travel memories used as an example of verifiable dogma.",
+  "argument": "Beliefs taken on authority are shallow until you verify them yourself. Freud's astonishment on the Acropolis shows how thin his school-taught belief had been; real conviction comes from 'go and see.'",
+  "other": "Lasch does not dispute this for geography. His objection is scope: the questions religion addresses (death, evil, dependence) are not the 'go and see' kind, and every generation faces them fresh (L¶12). They converge on how to check facts and diverge on whether religion is about facts.",
+  "stance": "mixed"
  },
  {
   "id": "freud-3",
@@ -22,7 +28,10 @@ window.CARDS = [
   "num": 3,
   "text": "All such dogmas as these, then, exact belief in their contents, but not without substantiating their title to this. They claim to be the condensed result of a long process of thought, which is founded on observation and also, certainly, on reasoning; they show how, if one so intends, one can go through this process oneself, instead of accepting the result of it; and the source of the knowledge imparted by the dogma is always added, where it is not, as with geographical statements, self-evident. For instance: the earth is shaped like a globe; the proofs adduced for this are Foucault's pendulum experiment, the phenomena of the horizon and the possibility of circumnavigating the earth. Since it is impracticable, as all concerned realize, to send every school child on a voyage round the world, one is content that the school teaching shall be taken on trust, but one knows that the way to personal conviction is still open.",
   "key": "Since it is impracticable, as all concerned realize, to send every school child on a voyage round the world, one is content that the school teaching shall be taken on trust, but one knows that the way to personal conviction is still open.",
-  "tell": "School dogmas can be checked: earth is a globe, Foucault's pendulum, circumnavigation. The 'way to personal conviction is still open.'"
+  "tell": "School dogmas can be checked: earth is a globe, Foucault's pendulum, circumnavigation. The 'way to personal conviction is still open.'",
+  "argument": "Legitimate dogmas earn belief by resting on observation and reasoning, letting you retrace the process yourself, and naming their source. This sets up the test that religion will fail in paragraph 4.",
+  "other": "Lasch accepts that the 'critical habit of mind,' once learned, cannot be unlearned (L¶2), so both prize critical inquiry. But he holds that religion's knowledge is knowledge of human limits (L¶13), which no experiment can supply. Partial convergence on method, divergence on what counts as knowledge.",
+  "stance": "mixed"
  },
  {
   "id": "freud-4",
@@ -30,7 +39,10 @@ window.CARDS = [
   "num": 4,
   "text": "Let us try to apply the same tests to the dogmas of religion. If we ask on what their claim to be believed is based, we receive three answers, which accord remarkably ill with one another. They deserve to be believed: firstly, because our primal ancestors already believed them; secondly, because we possess proofs, which have been handed down to us from this very period of antiquity; and thirdly, because it is forbidden to raise the question of their authenticity at all. Formerly this presumptuous act was visited with the very severest penalties, and even to-day society is unwilling to see anyone renew it.",
   "key": "They deserve to be believed: firstly, because our primal ancestors already believed them; secondly, because we possess proofs, which have been handed down to us from this very period of antiquity; and thirdly, because it is forbidden to raise the question of their authenticity at all.",
-  "tell": "The three answers for why religious dogmas deserve belief: ancestors believed, handed-down proofs, and it is forbidden to ask."
+  "tell": "The three answers for why religious dogmas deserve belief: ancestors believed, handed-down proofs, and it is forbidden to ask.",
+  "argument": "Religion offers three credentials, ancestral belief, ancient proofs, and a ban on questioning, and they contradict each other. If the proofs were real, the ban would be unnecessary.",
+  "other": "Lasch denies that religion ever rested on a ban on questioning: Job, the Carmina Burana, and William James's converts show doubt living inside the tradition (L¶10–12). He would agree that mere appeal to tradition is weak, since he distrusts nostalgia too (L¶7–8). Mostly divergent.",
+  "stance": "diverge"
  },
  {
   "id": "freud-5",
@@ -38,7 +50,10 @@ window.CARDS = [
   "num": 5,
   "text": "This third point cannot but rouse our strongest suspicions. Such a prohibition can surely have only one motive: that society knows very well the uncertain basis of the claim it makes for its religious doctrines. If it were otherwise, the relevant material would certainly be placed most readily at the disposal of anyone who wished to gain conviction for himself. And so we proceed to test the other two arguments with a feeling of mistrust not easily allayed. We ought to believe because our forefathers believed. But these ancestors of ours were far more ignorant than we; they believed in things we could not possibly accept today; so the possibility occurs that religious doctrines may also be in this category. The proofs they have bequeathed to us are deposited in writings that themselves bear every trace of being untrustworthy. They are full of contradictions, revisions, and interpolations; where they speak of actual authentic proofs they are themselves of doubtful authenticity. It does not help much if divine revelation is asserted to be the origin of their text or only of their content.",
   "key": "Such a prohibition can surely have only one motive: that society knows very well the uncertain basis of the claim it makes for its religious doctrines. [...] The proofs they have bequeathed to us are deposited in writings that themselves bear every trace of being untrustworthy.",
-  "tell": "The prohibition on questioning 'rouses our strongest suspicions.' Ancestors were ignorant; the writings are full of contradictions and interpolations."
+  "tell": "The prohibition on questioning 'rouses our strongest suspicions.' Ancestors were ignorant; the writings are full of contradictions and interpolations.",
+  "argument": "The taboo on questioning betrays that society knows its religious claims are shaky. Our ancestors were more ignorant than we are, and the scriptures they left are full of contradictions and revisions.",
+  "other": "This is the premise Lasch attacks head-on. Treating ancestors as ignorant children is the 'unexamined premise' of the life-cycle myth (L¶2) and 'the characteristic form of modern pride' (L¶6). Sharp divergence.",
+  "stance": "diverge"
  },
  {
   "id": "freud-6",
@@ -46,7 +61,10 @@ window.CARDS = [
   "num": 6,
   "text": "One must now mention two attempts to evade the problem, which both convey the impression of frantic effort. One of them, high-handed in its nature, is old; the other is subtle and modern. The first is the Credo quia absurdum [I believe it because it is absurd] of the early Father. It would imply that religious doctrines are outside reason's jurisdiction; they stand above reason. Their truth must be inwardly felt; one does not need to comprehend them. But this Credo is only of interest as a voluntary confession; as a decree it has no binding force. Am I to be obliged to believe every absurdity? And if not, why just this one? There is no appeal beyond reason. And if the truth of religious doctrines is dependent on an inner experience which bears witness to that truth, what is one to make of the many people who do not have that rare experience? One may expect all men to use the gift of reason that they possess, but one cannot set up an obligation that shall apply to all on a basis that only exists for quite a few. Of what significance is it for other people that you have won from a state of ecstasy, which has deeply moved you, an imperturbable conviction of the real truth of the doctrines of religion?",
   "key": "Am I to be obliged to believe every absurdity? And if not, why just this one? There is no appeal beyond reason.",
-  "tell": "Attacks Credo quia absurdum. 'There is no appeal beyond reason.' What about people who lack the rare inner experience?"
+  "tell": "Attacks Credo quia absurdum. 'There is no appeal beyond reason.' What about people who lack the rare inner experience?",
+  "argument": "'I believe because it is absurd' is no argument. Reason is the final court, and a rare inner experience cannot obligate the many people who never have it.",
+  "other": "Lasch, following James, treats exactly that inner experience (despair turning into 'yielding' and 'self-surrender') as the deepest form of faith (L¶11). He does not claim it binds others, but he takes it as evidence about what faith is. They diverge on whether experience counts as knowledge.",
+  "stance": "diverge"
  },
  {
   "id": "freud-7",
@@ -54,7 +72,10 @@ window.CARDS = [
   "num": 7,
   "text": "The second attempt is that of the philosophy of \"As If.\" It explains, that in our mental activity we assume all manner of things, the groundlessness, indeed the absurdity, of which we fully realize. They are called \"fictions,\" but from a variety of practical motives we are led to behave \"as if\" we believed in these fictions. This, it is argued, is the case with religious doctrines on account of their unequalled importance for the maintenance of human society. This argument is not far removed from the Credo quia absurdum. But I think that the claim of the philosophy of \"As If\" is such as only a philosopher could make. The man whose thinking is not influenced by the wiles of philosophy will never be able to accept it; with the confession of absurdity, of illogicality, there is no more to be said as far as he is concerned. He cannot be expected to forgo the guarantees he demands for all his usual activities but in the matter of his most important interests. I am reminded of one of my children who was distinguished at an early age by a peculiarly marked sense of reality. When the children were told a fairy tale, to which they listened with rapt attention, he would come forward and ask: Is that a true story? Having been told that it was not, he would turn away with an air of disdain. It is to be expected that men will soon behave in like manner towards the religious fairy tales, despite the advocacy of the philosophy of \"As If.\" But at present they still behave quite differently, and in past ages, in spite of their incontrovertible lack of authenticity, religious ideas have exercised the very strongest influence on mankind. This is a fresh psychological problem. We must ask where the inherent strength of these doctrines lies and to what circumstance they owe their efficacy, independent, as it is, of the acknowledgement of the reason.",
   "key": "It is to be expected that men will soon behave in like manner towards the religious fairy tales, despite the advocacy of the philosophy of \"As If.\" [...] We must ask where the inherent strength of these doctrines lies and to what circumstance they owe their efficacy, independent, as it is, of the acknowledgement of the reason.",
-  "tell": "The philosophy of 'As If' and fictions. Freud's child asking 'Is that a true story?' and turning away in disdain."
+  "tell": "The philosophy of 'As If' and fictions. Freud's child asking 'Is that a true story?' and turning away in disdain.",
+  "argument": "The 'As If' defence (religion as a useful fiction) satisfies only philosophers. Ordinary people want to know whether a story is true, and Freud predicts they will soon treat religious stories like fairy tales. The real puzzle is why religion has been so powerful despite weak credentials.",
+  "other": "Lasch answers the prediction directly: sixty years on, religion's future looks more secure than the illusion of mastery (L¶16). And Freud's clear-eyed child is the very self-image Lasch mocks, the intellectual who 'looks straight into the light without blinking' (L¶3). Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "freud-8",
@@ -62,7 +83,10 @@ window.CARDS = [
   "num": 8,
   "text": "I think we have sufficiently paved the way for the answer to both these questions. It will be found if we fix our attention on the psychical origin of religious ideas. These, which profess to be dogmas are not the residue of experience or the final result of reflection; they are illusions, fulfillments of the oldest, strongest and most insistent wishes of mankind; the secret of their strength is the strength of these wishes. We know already that the terrifying effect of infantile helplessness aroused the need for protection - protection through love - which the father relieved, and that the discovery that this helplessness would continue through the whole of life made it necessary to cling to the existence of a father - but this time a more powerful one. Thus the benevolent rule of divine providence allays our anxiety in face of life's dangers, the establishment of a moral world order ensures the fulfillment of the demands of justice, which within human culture have so often remained unfulfilled, and the prolongation of earthly existence by a future life provides in addition the local and temporal setting for these wish-fulfillments. Answers to the questions that tempt human curiosity, such as the origin of the universe and the relation between the body and the soul, are developed in accordance with the underlying assumptions of this system; it betokens a tremendous relief for the individual psyche if it is released from the conflicts of childhood arising out of the father complex, which are never wholly overcome, and if these conflicts are afforded a universally accepted solution.",
   "key": "they are illusions, fulfillments of the oldest, strongest and most insistent wishes of mankind; the secret of their strength is the strength of these wishes. We know already that the terrifying effect of infantile helplessness aroused the need for protection - protection through love - which the father relieved",
-  "tell": "The thesis: religious ideas are illusions, wish-fulfillments. Infantile helplessness, the father, divine providence, a moral world order, a future life."
+  "tell": "The thesis: religious ideas are illusions, wish-fulfillments. Infantile helplessness, the father, divine providence, a moral world order, a future life.",
+  "argument": "The thesis. Religious ideas are illusions, fulfilments of humanity's oldest wishes. The helpless infant needs a protecting father; the adult, still helpless, projects a more powerful father onto the universe as providence, moral order, and afterlife.",
+  "other": "Lasch's paragraph 13 is the direct reversal: 'the naive belief that our wishes govern the universe is precisely what religion attacks.' Yet both start from the same fact of lifelong dependence (L¶13–14). Same premise, opposite conclusion about what religion does with it.",
+  "stance": "mixed"
  },
  {
   "id": "freud-9",
@@ -70,7 +94,10 @@ window.CARDS = [
   "num": 9,
   "text": "When I say that they are illusions, I must define the meaning of the word. An illusion is not the same as an error, it is indeed not necessarily an error. Aristotle's belief that vermin are evolved out of dung, to which ignorant people still cling, was an error; so was the belief of a former generation of doctors that tabes dorsalis was the result of sexual excess. It would be improper to call these errors illusions. On the other hand, it was an illusion on the part of Columbus that he had discovered a new sea-route to India. The part played by his wish in this error is very clear. One may describe as an illusion the statement of certain nationalists that the Indo-Germanic race is the only one capable of culture, or the belief, which only psycho-analysis destroyed, that the child is a being without sexuality. It is characteristic of the illusion that it is derived from men's wishes; in this respect it approaches the psychiatric delusion, but it is to be distinguished from this, quite apart from the more complicated structure of the latter. In the delusion we emphasize as essential the conflict with reality; the illusion need not be necessarily false, that is to say, unrealizable or incompatible with reality. For instance, a poor girl may have an illusion that a prince will come and fetch her home. It is possible; some such cases have occurred. That the Messiah will come and found a golden age is much less probable; according to one's personal attitude one will classify this belief as an illusion or as analogous to a delusion. Examples of illusions that have come true are not easy to discover, but the illusion of the alchemists that all metals can be turned into gold may prove to be one. The desire to have lots of gold, as much gold as possible, has been considerably damped by our modern insight into the nature of wealth, yet chemistry no longer considers a transmutation of metal into gold as impossible. Thus we call a belief an illusion when wish-fulfillment is a prominent factor in its motivation, while disregarding its relations to reality, just as the illusion itself does.",
   "key": "Thus we call a belief an illusion when wish-fulfillment is a prominent factor in its motivation, while disregarding its relations to reality, just as the illusion itself does.",
-  "tell": "Defines 'illusion' vs. error vs. delusion. Aristotle's vermin, Columbus, the poor girl and the prince, the alchemists."
+  "tell": "Defines 'illusion' vs. error vs. delusion. Aristotle's vermin, Columbus, the poor girl and the prince, the alchemists.",
+  "argument": "An illusion is defined by its motivation, not its truth. It is a belief in which wish plays a prominent part; it may even turn out true (the alchemists), unlike an error or a delusion.",
+  "other": "Lasch adopts this very tool and turns it on modernity: the 'comfortable belief' faith must renounce (L¶13) and 'the illusion of mastery' (L¶16) are wish-driven beliefs in Freud's exact sense. They converge on the method and diverge only on the target.",
+  "stance": "converge"
  },
  {
   "id": "freud-10",
@@ -78,7 +105,10 @@ window.CARDS = [
   "num": 10,
   "text": "If after this survey we turn again to religious doctrines, we may reiterate that they are all illusions, they do not admit of proof, and no one can be compelled to consider them as true or to believe in them. Some of them are so improbable, so very incompatible with everything we have laboriously discovered about the reality of the world, that we may compare them - taking adequately into account the psychological differences - to delusions. Of the reality value of most of them we cannot judge; just as they cannot be proved, neither can they be refuted. We still know too little to approach them critically. The riddles of the universe only reveal themselves slowly to our enquiry, to many questions science can as yet give no answer; but scientific work is our only way to the knowledge of external reality. Again, it is merely illusion to expect anything from intuition or trance; they can give us nothing but particulars, which are difficult to interpret, about our own mental life, never information about the questions that are so lightly answered by the doctrines of religion. It would be wanton to let one's own arbitrary action fill the gap, and according to one's personal estimate declare this or that part of the religious system to be more or less acceptable. These questions are too momentous for that, too sacred, one might say.",
   "key": "Of the reality value of most of them we cannot judge; just as they cannot be proved, neither can they be refuted. [...] scientific work is our only way to the knowledge of external reality.",
-  "tell": "Religious doctrines are all illusions, unprovable and irrefutable. 'Scientific work is our only way to the knowledge of external reality.' Intuition and trance give nothing."
+  "tell": "Religious doctrines are all illusions, unprovable and irrefutable. 'Scientific work is our only way to the knowledge of external reality.' Intuition and trance give nothing.",
+  "argument": "Religious doctrines cannot be proved or refuted, but that opens no door for faith: science is the only road to knowledge, intuition and trance tell us nothing, and picking the doctrines you like is irresponsible.",
+  "other": "Lasch agrees that religion must be taken at full strength or not at all (L¶9, L¶13). But he sees scientific control over nature as the sponsor of modernity's real illusion (L¶15–16), and holds that knowledge of our limits is the most important knowledge there is. Convergence on 'no cafeteria religion,' divergence on science.",
+  "stance": "mixed"
  },
  {
   "id": "freud-11",
@@ -86,7 +116,10 @@ window.CARDS = [
   "num": 11,
   "text": "At this point it may be objected: well, then, if even the crabbed sceptics admit that the statements of religion cannot be confuted by reason, why should not I believe in them, since they have so much on their side - tradition, the concurrence of mankind, and all the consolation they yield? Yes, why not? Just as no one can be forced into belief, so no one can be forced into unbelief. But do not deceive yourself into thinking that with such arguments you are following the path of correct reasoning. If ever there was a case of facile argument, this is one. Ignorance is ignorance; no right to believe anything is derived from it. No reasonable man will behave so frivolously in other matters or rest content with such feeble grounds for his opinions or for the attitude he adopts; it is only in the highest and holiest things that he allows this. In reality these are only attempts to delude oneself or other people into the belief that one still holds fast to religion, when one has long cut oneself loose from it. Where questions of religion are concerned people are guilty of every possible kind of insincerity and intellectual misdemeanour. Philosophers stretch the meaning of words until they retain scarcely anything of their original sense: by calling \"God\" some vague abstraction which they have created for themselves, they pose as deists, as believers, before the world; they may even pride themselves on having attained a higher and purer idea of God, although their God is nothing but an insubstantial shadow and no longer the mighty personality of religious doctrine. Critics persist in calling \"deeply religious\" a person who confesses to a sense of man's insignificance and impotence in face of the universe, although it is not this feeling that constitutes the essence of religious emotion, but rather the next step, the reaction to it, which seeks a remedy against this feeling. He who goes no further, he who humbly acquiesces in the insignificant part man plays in the universe, is, on the contrary, irreligious in the truest sense of the word.",
   "key": "Ignorance is ignorance; no right to believe anything is derived from it. No reasonable man will behave so frivolously in other matters or rest content with such feeble grounds for his opinions or for the attitude he adopts; it is only in the highest and holiest things that he allows this.",
-  "tell": "Answers the 'why should not I believe?' objection. 'Ignorance is ignorance.' Philosophers stretch the word 'God'; humble acquiescence is 'irreligious in the truest sense.'"
+  "tell": "Answers the 'why should not I believe?' objection. 'Ignorance is ignorance.' Philosophers stretch the word 'God'; humble acquiescence is 'irreligious in the truest sense.'",
+  "argument": "'You cannot disprove it, so why not believe' is facile; ignorance grants no right to believe. Redefining God as an abstraction is dishonest. Real religion is the search for a remedy against human insignificance; simply accepting insignificance is irreligious.",
+  "other": "Lasch shares the contempt for watered-down religion (L¶9). But he inverts the last claim: humble acceptance, 'yielding' and 'self-surrender,' is the heart of faith (L¶11, L¶13). They describe the same moment and give it opposite names. This is the most instructive contrast in the readings.",
+  "stance": "mixed"
  },
  {
   "id": "freud-12",
@@ -94,7 +127,10 @@ window.CARDS = [
   "num": 12,
   "text": "It does not lie within the scope of this enquiry to estimate the value of religious doctrines as truth. It suffices that we have recognized them, psychologically considered, as illusions. But we need not conceal the fact that this discovery strongly influences our attitude to what must appear to many the most important of questions. We know approximately at what periods and by what sort of men religious doctrines were formed. If we now learn from what motives this happened, our attitude to the problem of religion will suffer an appreciable change. We say to ourselves: it would indeed be very nice if there were a God, who was both creator of the world and a benevolent providence, if there were a moral world order and a future life, but at the same time it is very odd that this is all just as we should wish it ourselves. And it would be still odder if our poor, ignorant, enslaved ancestors had succeeded in solving all these difficult riddles of the universe.",
   "key": "it would indeed be very nice if there were a God, who was both creator of the world and a benevolent providence, if there were a moral world order and a future life, but at the same time it is very odd that this is all just as we should wish it ourselves.",
-  "tell": "Closing: it would be 'very nice' if there were a God, a moral order, and a future life, but 'very odd that this is all just as we should wish it ourselves.'"
+  "tell": "Closing: it would be 'very nice' if there were a God, a moral order, and a future life, but 'very odd that this is all just as we should wish it ourselves.'",
+  "argument": "Conclusion. Psychologically, religious doctrines are illusions. It would be very nice if there were a God, a moral order, and an afterlife, but it is suspicious that reality matches our wishes so exactly, and unlikely that ignorant ancestors solved the deepest riddles.",
+  "other": "Lasch denies both halves. Faith is not what we would wish; it demands 'renouncing the right to be happy' (L¶14). And the ancestors were not naive: they knew despair, Fortune, and Job's problem (L¶10, L¶12). Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-1",
@@ -102,7 +138,10 @@ window.CARDS = [
   "num": 1,
   "text": "There is a vast body of commentary on the modern spiritual plight, all of which assumes that the experience of doubt, moral relativism, and despair is distinctively modern and, in some sense, the product of mankind's \"maturity.\" A survey of this literature, which includes the works of Freud, Jung, and Weber, reveals a recurring imagery that links the history of culture to the life cycle of individuals. In this analogy, civilization has passed through distinct phases, moving from a childhood of naive faith to the detached skepticism of an adult. Jung's description of the modern condition, for example, begins with a reference to the lost childhood of the race. The medieval works, in which \"men were all children of God...and knew exactly what they should do and how they should conduct themselves,\" now lies \"as far behind as childhood.\" In this modern view, religion, at least in its traditional forms, can no longer speak to the needs of a world that has outgrown its childhood. Freud's book on religion, which bears the scornful title The Future of an Illusion, concludes that religion has no future at all. Likening it to a \"childhood neurosis,\" he insists that \"men cannot remain children for ever.\"",
   "key": "In this analogy, civilization has passed through distinct phases, moving from a childhood of naive faith to the detached skepticism of an adult.",
-  "tell": "Surveys 'commentary on the modern spiritual plight' (Freud, Jung, Weber). The life-cycle analogy: civilization moves from childhood faith to adult skepticism. Quotes Freud's 'men cannot remain children for ever.'"
+  "tell": "Surveys 'commentary on the modern spiritual plight' (Freud, Jung, Weber). The life-cycle analogy: civilization moves from childhood faith to adult skepticism. Quotes Freud's 'men cannot remain children for ever.'",
+  "argument": "Lasch surveys the commentary on the modern spiritual plight (Freud, Jung, Weber) and finds one shared image: history as a life cycle from childhood faith to adult skepticism, so religion is something humanity outgrows.",
+  "other": "Freud is the paradigm case. He calls our ancestors 'poor, ignorant, enslaved' (F¶12), says they 'believed in things we could not possibly accept today' (F¶5), and expects people to outgrow 'religious fairy tales' (F¶7). Freud holds sincerely what Lasch is describing critically.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-2",
@@ -110,7 +149,10 @@ window.CARDS = [
   "num": 2,
   "text": "The unexamined premise that history can be compared to an individual's growth from childhood to maturity makes it possible to condemn any form of cultural conservatism or any respect for tradition as simply an expression of the natural human tendency to cling to the security of childhood and to resist emotional and intellectual growth. The educated classes, unable to escape the burden of sophistication, may envy the naive faiths of the past; they may even envy the masses who continue unthinkingly to observe traditional faiths in the twentieth century, not yet having been exposed to the wintry blasts of modern critical thinking. They cannot trade places with the unenlightened masses, however, any more than they can return to childhood. Once the critical habit of mind has been fully assimilated, no one who understands its implications can find any refuge or resting place in premodern systems of thought and belief.",
   "key": "Once the critical habit of mind has been fully assimilated, no one who understands its implications can find any refuge or resting place in premodern systems of thought and belief.",
-  "tell": "The 'unexamined premise' that history is like individual growth. Educated classes envy naive faith but 'cannot trade places with the unenlightened masses.'"
+  "tell": "The 'unexamined premise' that history is like individual growth. Educated classes envy naive faith but 'cannot trade places with the unenlightened masses.'",
+  "argument": "The growth metaphor is an 'unexamined premise' that lets moderns dismiss all tradition as clinging to childhood. The educated may envy naive faith, but they cannot return to it once the critical habit of mind is learned.",
+  "other": "Freud agrees the critical habit is irreversible and thinks that is good: 'no one can be forced into unbelief,' but 'ignorance is ignorance' (F¶11). They converge on the irreversibility of criticism and diverge on whether the premise behind it has been examined.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-3",
@@ -118,7 +160,10 @@ window.CARDS = [
   "num": 3,
   "text": "It is this experience of disillusionment, more than anything else, that has been held to distinguish the artist and the intellectual from unreflective creatures of convention, those people who allegedly distrust artists and intellectuals precisely because they -- the naive multitude -- cannot bear to hear the bad news. Unenlightened ages past might be forgiven for believing things no educated person could, in the twentieth century, still believe, or for taking literally mythologies better understood in a figurative or metaphorical sense; one might even forgive the modern proletarian, excluded from an education by virtue of his unremitting toil; but the bourgeois philistine lives in an enlightened age, with easy access to enlightened culture, yet deliberately chooses not to see the light, lest it destroy the illusions essential to his peace of mind. The intellectual alone looks straight into the light without blinking. Disillusioned but undaunted: Such is the self-image of modernity, so proud of its intellectual emancipation that it makes no effort to conceal the spiritual price that has to be paid.",
   "key": "The intellectual alone looks straight into the light without blinking. Disillusioned but undaunted: Such is the self-image of modernity, so proud of its intellectual emancipation that it makes no effort to conceal the spiritual price that has to be paid.",
-  "tell": "Disillusionment as what sets the artist and intellectual apart. The 'bourgeois philistine' refuses the light; the intellectual 'looks straight into the light without blinking.'"
+  "tell": "Disillusionment as what sets the artist and intellectual apart. The 'bourgeois philistine' refuses the light; the intellectual 'looks straight into the light without blinking.'",
+  "argument": "Disillusionment has become the badge of the artist and intellectual, who alone 'looks straight into the light without blinking.' This heroic self-image is modernity's picture of itself.",
+  "other": "Freud embodies the self-image without irony: his child who asks 'Is that a true story?' and turns away in disdain (F¶7), and the 'reasonable man' who refuses feeble grounds for belief (F¶11). What Lasch calls a pose, Freud calls honesty.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-4",
@@ -126,7 +171,10 @@ window.CARDS = [
   "num": 4,
   "text": "We might call it a quaint conceit, this mental habit of playing off our disillusionment against the innocence of our ancestors, except that it originates in an impulse that is anything but quaint and has very serious consequences, not the least of which is to prevent an understanding of vitally important matters. It betrays a predisposition to read history either as a tragedy of lost illusions or as the progress of critical reason.",
   "key": "It betrays a predisposition to read history either as a tragedy of lost illusions or as the progress of critical reason.",
-  "tell": "The 'quaint conceit' of playing off our disillusionment against ancestral innocence. History read either as 'a tragedy of lost illusions or as the progress of critical reason.'"
+  "tell": "The 'quaint conceit' of playing off our disillusionment against ancestral innocence. History read either as 'a tragedy of lost illusions or as the progress of critical reason.'",
+  "argument": "The conceit of playing our disillusionment against ancestral innocence is not harmless. It forces history into two shapes: a tragedy of lost illusions or the progress of critical reason.",
+  "other": "Freud reads history in the second shape throughout: knowledge advances from school dogma to personal verification (F¶3), ancestors were more ignorant (F¶5), science slowly reveals the riddles (F¶10). Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-5",
@@ -134,7 +182,10 @@ window.CARDS = [
   "num": 5,
   "text": "I say \"either/or,\" but of course these two versions of the modernist historical myth are closely related; indeed, they are symbiotically dependent on each other. It is the progress of critical reason that allegedly leads to lost illusions; disillusionment represents the price of progress.",
   "key": "It is the progress of critical reason that allegedly leads to lost illusions; disillusionment represents the price of progress.",
-  "tell": "Short paragraph: the 'either/or' versions of the modernist myth are 'symbiotically dependent.' Disillusionment is the price of progress."
+  "tell": "Short paragraph: the 'either/or' versions of the modernist myth are 'symbiotically dependent.' Disillusionment is the price of progress.",
+  "argument": "The two shapes are one myth. It is the progress of critical reason that supposedly costs us our illusions; disillusionment is the price of progress.",
+  "other": "Freud accepts that price knowingly: 'it would indeed be very nice if there were a God,' but honesty forbids the comfort (F¶12). They converge on the description (progress costs illusions) and diverge on whether that story is true.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-6",
@@ -142,7 +193,10 @@ window.CARDS = [
   "num": 6,
   "text": "From this point of view, the relation of past to present is defined above all by the contrast between simplicity and sophistication. The barrier that divides the past from the present -- an impassable barrier, in the imagination of modernity -- is the experience of disillusionment, which makes it impossible to recapture the innocence of earlier days. Disillusionment, we might say, is the characteristic form of modern pride.",
   "key": "Disillusionment, we might say, is the characteristic form of modern pride.",
-  "tell": "Past vs. present as simplicity vs. sophistication. Key line: 'Disillusionment, we might say, is the characteristic form of modern pride.'"
+  "tell": "Past vs. present as simplicity vs. sophistication. Key line: 'Disillusionment, we might say, is the characteristic form of modern pride.'",
+  "argument": "Past and present are divided by simplicity versus sophistication, with disillusionment as the impassable barrier. Naming the vice: disillusionment is 'the characteristic form of modern pride.'",
+  "other": "Freud would reject the word pride. For him disillusionment is plain honesty: 'do not deceive yourself' (F¶11). Where Lasch sees a spiritual fault, Freud sees the refusal of a spiritual fault, self-deception. Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-7",
@@ -150,7 +204,10 @@ window.CARDS = [
   "num": 7,
   "text": "This pride is evident not only in the aggressively triumphal view of cultural progress that dismisses the past without regrets but, paradoxically, in the nostalgic myths of the past as well. Nostalgia and the idea of progress go hand in hand. The assumption that our civilization has achieved a level of unparalleled complexity naturally gives rise to a yearning for bygone simplicity.",
   "key": "Nostalgia and the idea of progress go hand in hand. The assumption that our civilization has achieved a level of unparalleled complexity naturally gives rise to a yearning for bygone simplicity.",
-  "tell": "Pride shows in both triumphal progress and nostalgia. 'Nostalgia and the idea of progress go hand in hand.'"
+  "tell": "Pride shows in both triumphal progress and nostalgia. 'Nostalgia and the idea of progress go hand in hand.'",
+  "argument": "Modern pride appears not only in triumphal progress but in nostalgia. Believing our civilization uniquely complex naturally produces a yearning for bygone simplicity.",
+  "other": "Freud has no nostalgia, but he does hold the other half, the assumption of unparalleled modern knowledge ('everything we have laboriously discovered about the reality of the world,' F¶10). Lasch's point applies to Freud's progressivism, not to any wistfulness. Partial.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-8",
@@ -158,7 +215,10 @@ window.CARDS = [
   "num": 8,
   "text": "Nostalgia is superficially loving in its re-creation of the past; but it evokes the past only to bury it alive. It shares with the belief in progress, to which it is only superficially opposed, an eagerness to proclaim the death of the past and to deny history's hold over the present. Those who mourn the death of the past and those who acclaim it both take for granted that our age has outgrown its childhood. Both find it difficult to believe that history still haunts our enlightened, disillusioned adolescence (or maturity or senility or whatever stage of the life cycle we have allegedly reached). Both are governed in their attitude toward the past, by the prevailing disbelief in ghosts.",
   "key": "Nostalgia is superficially loving in its re-creation of the past; but it evokes the past only to bury it alive. [...] Both are governed in their attitude toward the past, by the prevailing disbelief in ghosts.",
-  "tell": "'Nostalgia... evokes the past only to bury it alive.' Both mourners and cheerleaders deny history's hold; 'the prevailing disbelief in ghosts.'"
+  "tell": "'Nostalgia... evokes the past only to bury it alive.' Both mourners and cheerleaders deny history's hold; 'the prevailing disbelief in ghosts.'",
+  "argument": "Nostalgia buries the past alive. Mourners and celebrants of the past both assume we have outgrown childhood and both deny that history still haunts the present: 'the prevailing disbelief in ghosts.'",
+  "other": "Freud openly denies the past's authority (F¶5). Yet his own theory says the conflicts of childhood 'are never wholly overcome' (F¶8), which is a kind of belief in ghosts. Lasch's point that the past haunts the present is, oddly, something Freud's psychology supports even as his history denies it.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-9",
@@ -166,7 +226,10 @@ window.CARDS = [
   "num": 9,
   "text": "Perhaps the most important casualty of this habit of mind is a proper understanding of religion. In the commentary on the modern spiritual predicament, religion is consistently treated as a source of intellectual and emotional security, rather than as a challenge to complacency and pride. Its ethical teachings are misconstrued as a body of simple commandments leaving no room for ambiguity or doubt. Recall Jung's description of medieval Christians as \"children of God [who] knew exactly what they should do and how they should conduct themselves.\" Joseph Wood Krutch, the early-twentieth-century critic, took the same view of religion. Medieval theology, according to Krutch, made the conduct of life \"an exact science.\" It offered a \"plan of life\" that was \"delightfully simple.\" Medieval Christians \"accepted the laws of God in a fashion exactly parallel to that in which the contemporary scientist accepts the Laws of Nature\"; this unquestioning obedience to an authoritative science of morals was the only alternative to \"moral nihilism.\" \"As soon as one begins to doubt either the validity of the laws of God...or as soon as one begins to raise a questions as the purpose of life,\" one begins to slide down the slippery slope to relativism, moral anarchy, and cultural despair.",
   "key": "religion is consistently treated as a source of intellectual and emotional security, rather than as a challenge to complacency and pride. Its ethical teachings are misconstrued as a body of simple commandments leaving no room for ambiguity or doubt.",
-  "tell": "The chief casualty is a proper understanding of religion, misread as 'security.' Cites Jung and Joseph Wood Krutch: medieval morality as 'an exact science,' the slide to 'moral nihilism.'"
+  "tell": "The chief casualty is a proper understanding of religion, misread as 'security.' Cites Jung and Joseph Wood Krutch: medieval morality as 'an exact science,' the slide to 'moral nihilism.'",
+  "argument": "The chief casualty of the modern myth is a misreading of religion as security and simple commandments (Jung, Krutch), with doubt as the first step toward nihilism.",
+  "other": "Freud's paragraph 8 is the textbook case of the reading Lasch rejects: providence 'allays our anxiety,' a moral order guarantees justice, an afterlife supplies the setting. For Freud, security is what religion is for; for Lasch, that is the caricature. Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-10",
@@ -174,7 +237,10 @@ window.CARDS = [
   "num": 10,
   "text": "What has to be questioned here is the assumption that religion ever provided a set of comprehensive and unambiguous answers to ethical questions, answers completely resistant to skepticism; or that it forestalled speculation about the meaning and purpose of life; or that religious people in the past were unacquainted with existential despair. The famous collection of songs written by medieval students preparing for the priesthood, Carmina Burana, should be enough in themselves to dispel this notion; they give voice, these disturbing compositions, to an age-old suspicion that the universe is ruled by Fortune, not by Providence, that life has no higher purpose at all, and that the better part of moral wisdom is to enjoy life while you can.",
   "key": "What has to be questioned here is the assumption that religion ever provided a set of comprehensive and unambiguous answers to ethical questions, answers completely resistant to skepticism; or that it forestalled speculation about the meaning and purpose of life; or that religious people in the past were unacquainted with existential despair.",
-  "tell": "Questions whether religion ever gave unambiguous answers. Carmina Burana: the universe ruled by Fortune, not Providence; enjoy life while you can."
+  "tell": "Questions whether religion ever gave unambiguous answers. Carmina Burana: the universe ruled by Fortune, not Providence; enjoy life while you can.",
+  "argument": "Religion never provided doubt-proof answers, and religious people of the past knew existential despair. The Carmina Burana, written by future priests, sing that Fortune rules and life has no higher purpose.",
+  "other": "Freud pictures the past as a time when questioning religion 'was visited with the very severest penalties' (F¶4) and believers were 'enslaved' (F¶12). Lasch's historical evidence is aimed squarely at that picture. Divergent on the facts of history.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-11",
@@ -182,7 +248,10 @@ window.CARDS = [
   "num": 11,
   "text": "Or consider the varieties of religious experience analyzed by William James in his book of that name, a book that is distinguished by a complete indifference to issues of historical chronology. To readers formed by the self-consciously modern tradition, such an indifference might appear to be a weakness of James's book, but it is essential to his point -- that the deepest variety of religious faith always, in every age, arises out of a background of despair. Religious faith asserts the goodness of being in the face of suffering and evil. Black despair and alienation -- which have their origin not in perceptions exclusively modern but in the bitterness always felt toward a God who allows evil and suffering to flourish -- often becomes the prelude to conversion. An awareness of \"radical evil\" underlies the spiritual intoxication that finally comes with \"yielding\" and \"self-surrender.\" If nothing else, the shadow of death hangs over our pleasures and triumphs, calling them into question.",
   "key": "the deepest variety of religious faith always, in every age, arises out of a background of despair. Religious faith asserts the goodness of being in the face of suffering and evil.",
-  "tell": "William James, The Varieties of Religious Experience. Faith 'always, in every age, arises out of a background of despair.' 'Radical evil,' 'yielding,' 'self-surrender.'"
+  "tell": "William James, The Varieties of Religious Experience. Faith 'always, in every age, arises out of a background of despair.' 'Radical evil,' 'yielding,' 'self-surrender.'",
+  "argument": "Following William James, the deepest faith in every age arises from despair. Faith asserts the goodness of being in the face of evil; awareness of radical evil precedes the surrender that brings peace.",
+  "other": "Freud grants that religion responds to human suffering and insignificance (F¶8, F¶11), so they converge on the starting point. But he says private experience proves nothing to others (F¶6) and that acquiescing in insignificance is 'irreligious' (F¶11), the reverse of Lasch's 'self-surrender.'",
+  "stance": "mixed"
  },
  {
   "id": "lasch-12",
@@ -190,7 +259,10 @@ window.CARDS = [
   "num": 12,
   "text": "The modern world has no monopoly on the fear of death or alienation from God. Alienation is the normal condition of human existence. Rebellion against God is the natural reaction to the discovery that the world was not made for our personal convenience. The further discovery that suffering is visited on the just and unjust alike is hard to square with a belief in a benign and omnipotent creator, as we know from the Book of Job.",
   "key": "The modern world has no monopoly on the fear of death or alienation from God. Alienation is the normal condition of human existence. Rebellion against God is the natural reaction to the discovery that the world was not made for our personal convenience.",
-  "tell": "'The modern world has no monopoly on the fear of death.' Alienation is normal; rebellion against God is natural. The Book of Job."
+  "tell": "'The modern world has no monopoly on the fear of death.' Alienation is normal; rebellion against God is natural. The Book of Job.",
+  "argument": "Alienation from God is the normal human condition, not a modern one. Rebellion is the natural reaction to learning the world was not made for us, and Job already faced the suffering of the just.",
+  "other": "Freud agrees with the fact: the world does not meet our wishes, and justice has 'so often remained unfulfilled' (F¶8). They converge on the diagnosis of the human situation and diverge on the response: Freud says religion invents a father to fix it, Lasch says faith accepts it.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-13",
@@ -198,7 +270,10 @@ window.CARDS = [
   "num": 13,
   "text": "But it is just this comfortable belief -- that the purposes of the Almighty coincide with our purely human purposes -- that religious faith requires us to renounce. Religion reminds us of the inescapable limits on human power and freedom. Far from endorsing comfortable superstitions, it undermines the most important superstition of all -- that the human race controls its own destiny. According to its critics, religion provides the security of childlike dependence of a father figure who answers all our prayers. But the naive belief that our wishes govern the universe is precisely what religion attacks. We have no special claim on the universe, and our prayers are answered only when we surrender that claim. Such is the true meaning of religious faith, as it has been understood by a long succession of prophets through the ages.",
   "key": "But the naive belief that our wishes govern the universe is precisely what religion attacks. We have no special claim on the universe, and our prayers are answered only when we surrender that claim.",
-  "tell": "Faith requires renouncing the belief that God's purposes match ours. Religion undermines 'the most important superstition of all': that humanity controls its destiny. 'Our prayers are answered only when we surrender that claim.'"
+  "tell": "Faith requires renouncing the belief that God's purposes match ours. Religion undermines 'the most important superstition of all': that humanity controls its destiny. 'Our prayers are answered only when we surrender that claim.'",
+  "argument": "The central reversal. Faith requires renouncing the belief that God's purposes coincide with ours. Religion attacks the wish that our prayers govern the universe; prayers are answered only when that claim is surrendered.",
+  "other": "This is the direct answer to Freud's thesis that religion fulfils the wish for a protecting father (F¶8); 'father figure who answers all our prayers' paraphrases Freud. Yet both are suspicious of wish-driven belief (F¶9, F¶12). Divergent about religion, convergent about wish.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-14",
@@ -206,7 +281,10 @@ window.CARDS = [
   "num": 14,
   "text": "The religious critique of pride ought to speak directly and compellingly to modern men and women, who find it galling to be reminded of their dependence on powers beyond their own control or at least beyond the control of humanity in general. Such people find it difficult to acknowledge the justice and goodness of these higher powers when the world is so obviously full of evil. They find it difficult to reconcile their expectations of worldly success and happiness, so often undone by events, with the idea of a just, loving, and all-powerful creator. Unable to conceive of a God who does not regard human happiness as the be-all and end-all of creation, they cannot see the central paradox of religious faith: that the secret of happiness lies in renouncing the right to be happy.",
   "key": "they cannot see the central paradox of religious faith: that the secret of happiness lies in renouncing the right to be happy.",
-  "tell": "The religious critique of pride should speak to moderns. The 'central paradox': 'the secret of happiness lies in renouncing the right to be happy.'"
+  "tell": "The religious critique of pride should speak to moderns. The 'central paradox': 'the secret of happiness lies in renouncing the right to be happy.'",
+  "argument": "The religious critique of pride should speak to moderns, but they cannot imagine a God indifferent to human happiness, so they miss the paradox: the secret of happiness lies in renouncing the right to be happy.",
+  "other": "Freud assumes religion promises happiness: 'it would indeed be very nice if there were a God... a benevolent providence... a future life' (F¶12). Lasch's paradox says genuine faith promises the opposite. Divergent.",
+  "stance": "diverge"
  },
  {
   "id": "lasch-15",
@@ -214,7 +292,10 @@ window.CARDS = [
   "num": 15,
   "text": "What makes the modern temper modern, then, is not that we have lost our childish sense of dependence but that the normal rebellion against dependence is more pervasive today than it used to be. But this rebellion is not new, as Flannery O'Connor reminds us when she observes that \"there are long periods in the lives of all of us...when the truth as revealed by faith is hideous, emotionally disturbing, downright repulsive.\" If \"right now the whole world seems to be going through a dark night of the soul,\" it is because the normal rebellion against dependence appears to be sanctioned by our scientific control over nature -- the same progress of science that has allegedly destroyed religious superstition.",
   "key": "What makes the modern temper modern, then, is not that we have lost our childish sense of dependence but that the normal rebellion against dependence is more pervasive today than it used to be.",
-  "tell": "What makes the modern temper modern: rebellion against dependence is more pervasive. Flannery O'Connor; 'dark night of the soul'; science seems to sanction the rebellion."
+  "tell": "What makes the modern temper modern: rebellion against dependence is more pervasive. Flannery O'Connor; 'dark night of the soul'; science seems to sanction the rebellion.",
+  "argument": "What is modern is not lost dependence but a more pervasive rebellion against it. O'Connor shows the rebellion is old; what is new is that science seems to sanction it.",
+  "other": "Freud agrees dependence is lifelong: 'this helplessness would continue through the whole of life' (F¶8). But his remedy, growing out of the clinging with science's help (F¶10), is exactly what Lasch names rebellion against dependence. Convergent on the condition, divergent on the cure.",
+  "stance": "mixed"
  },
  {
   "id": "lasch-16",
@@ -222,6 +303,9 @@ window.CARDS = [
   "num": 16,
   "text": "Those wonderful machines that science has enabled us to construct have made it possible to imagine ourselves as master of our fate. In an age that fancies itself as disillusioned, this is the one illusion -- the illusion of mastery -- that remains as tenacious as ever. But now that we are beginning to grasp the limits of our control over the natural world, the future of this illusion (to invoke Freud once again) is very much in doubt -- more problematical, certainly than the future of religion.",
   "key": "In an age that fancies itself as disillusioned, this is the one illusion -- the illusion of mastery -- that remains as tenacious as ever.",
-  "tell": "Machines and 'the illusion of mastery,' the one illusion that survives. The 'future of this illusion' is more in doubt than the future of religion."
+  "tell": "Machines and 'the illusion of mastery,' the one illusion that survives. The 'future of this illusion' is more in doubt than the future of religion.",
+  "argument": "Science's machines let us imagine ourselves masters of our fate. The illusion of mastery is the one that survives, and its future is more in doubt than religion's.",
+  "other": "Freud predicted religion's decline (F¶7) and made science the only path to knowledge (F¶10). Lasch turns Freud's title against him. Ironically, Freud's own example of an illusion that might come true is the alchemists' dream fulfilled by chemistry (F¶9), a small concession that science can serve a wish. Divergent.",
+  "stance": "diverge"
  }
 ];

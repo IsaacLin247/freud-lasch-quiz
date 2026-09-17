@@ -103,6 +103,13 @@
   .feedback .src b.freud { color: var(--freud); } .feedback .src b.lasch { color: var(--lasch); }
   .feedback .tell { font-size: 14px; color: var(--ink); }
   .feedback .tell::before { content: "Tell: "; font-weight: 600; color: var(--muted); }
+  .feedback .arg { margin-top: 12px; padding-top: 10px; border-top: 1px dashed color-mix(in srgb, var(--ink) 18%, transparent); font-size: 14px; line-height: 1.55; }
+  .feedback .arg .lbl { font-size: 11px; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; margin-bottom: 3px; display: flex; align-items: center; gap: 8px; }
+  .feedback .arg .lbl.freud { color: var(--freud); } .feedback .arg .lbl.lasch { color: var(--lasch); }
+  .chip { display: inline-block; font-size: 10px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; padding: 1px 7px; border-radius: 99px; }
+  .chip.converge { background: var(--ok-soft); color: var(--ok); }
+  .chip.diverge { background: var(--bad-soft); color: var(--bad); }
+  .chip.mixed { background: color-mix(in srgb, var(--accent) 18%, transparent); color: var(--accent); }
   .feedback .again { font-size: 13px; color: var(--muted); margin-top: 8px; font-style: italic; }
   @keyframes pop { from { opacity: 0; transform: translateY(4px);} to { opacity: 1; transform: none; } }
 
@@ -175,6 +182,8 @@
       <div class="head" id="fbHead"></div>
       <div class="src" id="fbSrc"></div>
       <div class="tell" id="fbTell"></div>
+      <div class="arg"><div class="lbl" id="argLbl"></div><div id="argText"></div></div>
+      <div class="arg"><div class="lbl" id="otherLbl"></div><div id="otherText"></div></div>
       <div class="again" id="fbAgain"></div>
       <details class="full" id="fullWrap"><summary>Show the whole paragraph</summary><p id="fullText"></p></details>
     </div>
@@ -337,6 +346,14 @@
     document.getElementById("fbSrc").innerHTML =
       '<b class="' + cur.author + '">' + NAMES[cur.author] + "</b>, <i>" + TITLES[cur.author] + "</i>, paragraph " + cur.num;
     document.getElementById("fbTell").textContent = cur.tell;
+    const other = cur.author === "freud" ? "lasch" : "freud";
+    const STANCE = { converge: "They converge", diverge: "They diverge", mixed: "Partly converge" };
+    document.getElementById("argLbl").className = "lbl " + cur.author;
+    document.getElementById("argLbl").textContent = "What " + NAMES[cur.author].split(" ")[1] + " is arguing here";
+    document.getElementById("argText").textContent = cur.argument;
+    document.getElementById("otherLbl").className = "lbl " + other;
+    document.getElementById("otherLbl").innerHTML = "What " + NAMES[other].split(" ")[1] + " thinks about this <span class=\"chip " + cur.stance + "\">" + STANCE[cur.stance] + "</span>";
+    document.getElementById("otherText").textContent = cur.other;
     document.getElementById("fbAgain").textContent = againMsg;
     const fw = document.getElementById("fullWrap");
     fw.style.display = curView && curView.excerpt ? "" : "none";
