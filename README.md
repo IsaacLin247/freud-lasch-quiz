@@ -12,3 +12,4 @@ Study tools for two readings on religion:
 - `build_data.py` — regenerates `docs/data.js` from the two text files.
 - `Freud_Future_of_an_Illusion_Guide.pdf`, `Lasch_Illusion_of_Disillusionment_Guide.pdf` — paragraph-by-paragraph study guides.
 - `Freud_vs_Lasch_Comparison.pdf` — compare-and-contrast document with quotations beside each claim.
+- `Freud_Lasch_Passage_Alignment.pdf` — sentence pairs where the two align and where they do not, with the reasons, plus a paragraph-by-paragraph index.
